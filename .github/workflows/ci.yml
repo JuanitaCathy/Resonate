@@ -1,0 +1,33 @@
+name: CI Resonate
+on:
+  push:
+    branches:
+      - master
+jobs:
+  flutter_test:
+    name: Run flutter test and analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          channel: stable
+          version: '2.18.6'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Run Tests
+        run: flutter test
+ 
+      
+
+    
