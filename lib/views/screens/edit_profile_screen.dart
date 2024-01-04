@@ -174,7 +174,10 @@ class EditProfileScreen extends StatelessWidget {
                               )
                             : const Text(
                                 'Save changes',
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xFF725001),
+                                ),
                               ),
                       ),
                     ),
