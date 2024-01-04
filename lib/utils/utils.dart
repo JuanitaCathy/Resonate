@@ -15,6 +15,8 @@ class AppUtils {
     String secondBtnText = "Cancel",
     required VoidCallback onFirstBtnPressed,
     required VoidCallback onSecondBtnPressed,
+    TextStyle? firstBtnTextStyle, // Added parameter for custom style
+    TextStyle? secondBtnTextStyle,//herrrrrrre
   }) {
     Get.defaultDialog(
       title: title,
